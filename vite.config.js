@@ -1,3 +1,8 @@
+// vite.config.js
+export default {
+  base: '/',
+  // ...other config
+}
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 export default defineConfig({
