@@ -1,13 +1,94 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Luxury Profile</title>
-    <meta name="theme-color" content="#0a0a0a" />
-  </head>
-  <body class="bg-black">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manish — Annovation</title>
+
+  <!-- Elegant serif + neutral sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <meta name="description" content="Manish — refined design and craftsmanship." />
+</head>
+<body class="page-root">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="crest" aria-hidden="true">M</div>
+        <div class="brand-text">
+          <h1 class="brand-title">Manish</h1>
+          <p class="brand-sub">Annovation</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h2 class="hero-title">Crafted with restraint. Designed to last.</h2>
+        <p class="hero-sub">A curated portfolio of refined ideas, timeless aesthetics, and thoughtful execution.</p>
+        <p class="hero-cta"><a class="btn" href="#work">Explore Work</a></p>
+      </div>
+    </section>
+
+    <section id="about" class="container section about">
+      <div class="card">
+        <h3>About</h3>
+        <p>We focus on clarity, proportion, and subtle detail. Our work favors quality over noise — considered typography, muted tones, and a restrained palette that feels both modern and timeless.</p>
+      </div>
+    </section>
+
+    <section id="work" class="container section work-grid">
+      <article class="work-item">
+        <div class="work-media" style="background-image:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)), url('https://picsum.photos/800/600?grayscale');"></div>
+        <div class="work-body">
+          <h4>Signature Project</h4>
+          <p>Elegant identity and visual system for a boutique brand.</p>
+        </div>
+      </article>
+
+      <article class="work-item">
+        <div class="work-media" style="background-image:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)), url('https://picsum.photos/801/600?grayscale');"></div>
+        <div class="work-body">
+          <h4>Editorial Design</h4>
+          <p>Long-form layouts with typographic hierarchy and generous margins.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="contact" class="container section contact">
+      <div class="card">
+        <h3>Contact</h3>
+        <p>For inquiries and collaborations, email <a href="mailto:hello@manish.annovation.online">hello@manish.annovation.online</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Manish — Annovation</small>
+    </div>
+  </footer>
+
+  <script>
+    // small JS: set year and simple focus outline for keyboard users
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){
+      const body = document.body;
+      window.addEventListener('keydown', function(e){
+        if(e.key === 'Tab') body.classList.add('show-focus');
+      });
+    })();
+  </script>
+</body>
 </html>
+
